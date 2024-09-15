@@ -7,7 +7,7 @@ const GamePage = ({ selectedTeam }) => {
   const [guessedPlayers, setGuessedPlayers] = useState([]);
   const [input, setInput] = useState('');
   const [score, setScore] = useState(0);
-  const [timer, setTimer] = useState(20); // 5 minutos
+  const [timer, setTimer] = useState(300); // 5 minutos
   const [players, setPlayers] = useState([]);
   const [gameStarted, setGameStarted] = useState(false);
   const [totalPlayers, setTotalPlayers] = useState(0);
