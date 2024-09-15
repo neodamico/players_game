@@ -1,38 +1,104 @@
+/* src/App.css */
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.playButton {
+  display: table-row;
+  margin: 10px;
+  background-color: green; /* Cor de fundo verde */
+  color: white; /* Cor do texto */
+  border: 75%; /* Remove a borda padrão */
+  padding: 10px 50px ; /* Ajusta o espaçamento interno do botão */
+  font-size: 16px; /* Tamanho da fonte */
+  cursor: pointer; /* Adiciona um cursor de ponteiro */
+  border-radius: 5px; /* Bordas arredondadas, se desejar */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.playButton:hover {
+  background-color: darkgreen; /* Cor quando o mouse passa sobre o botão */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nationality-container {
+  width: 45%; /* Ajusta para o tamanho adequado das colunas */
+  margin: 10px;
+}
+
+.players-table {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nationality-title {
+  background-color: #f39c12;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.player-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.player-cell {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+  max-height: auto;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* src/App.css */
+.team-selection {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 767px) {
+  .team-selection {
+    flex-direction: column; /* Muda o layout para coluna em telas menores */
+    align-items: center; /* Alinha os itens no centro */
+    gap: 10px; /* Reduz o espaço entre os itens */
+    margin-top: 10px; /* Ajusta a margem superior */
+    max-width: 100%;
+    height: auto;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+.team-selection div {
+  text-align: center;
+}
+
+.team-selection img {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.team-selection img:hover {
+  transform: scale(1.1); /* Aumenta um pouco a imagem quando passar o mouse */
+}
+
+
+.input-correct {
+  border: 2px solid green; /* Borda verde para acertos */
+  background-color: #e0f9e0; /* Fundo suave verde para acertos */
+}
+
+.input-incorrect {
+  border: 2px solid red; /* Borda vermelha para erros */
+  background-color: #f9e0e0; /* Fundo suave vermelho para erros */
 }
